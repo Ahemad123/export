@@ -15,29 +15,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Mock Data
 const products = [
-    // Rices
     { id: 1, name: "Premium Rice", description: "Long-grain, aromatic basmati rice sourced from the finest fields.", image: "assets/images/rice.png" },
-    // Agriculture (Spices, Tea, Coffee, Cashew, Honey, Coconut, Rubber, Coir, Bamboo)
+    { id: 5, name: "Vegetables & Fruits", description: "Farm-fresh organic vegetables and seasonal fruits.", image: "assets/images/vegetables.png" },
+    { id: 6, name: "Frozen Seafood", description: "Premium quality frozen seafood processed for freshness.", image: "assets/images/fresh_seafood.png" },
+    { id: 19, name: "Coconut Products", description: "Desiccated coconut, oil, and other coconut-based products.", image: "assets/images/coconuts.png" },
     { id: 2, name: "Organic Spices", description: "A variety of authentic spices including turmeric, cardamom, and pepper.", image: "assets/images/spices.png" },
+    { id: 3, name: "Cotton Textiles", description: "High-thread-count cotton fabrics suitable for luxury garments.", image: "assets/images/textiles.png" },
+    { id: 25, name: "Metal Scrap", description: "High-grade recycled metal scrap for industrial use.", image: "assets/images/scrap.png" },
+    { id: 12, name: "Jute Bags", description: "Eco-friendly and durable jute bags.", image: "assets/images/jute.png" },
+    { id: 13, name: "Silk Fabrics", description: "Luxurious silk fabrics in vibrant colors.", image: "assets/images/silk.png" }, 
     { id: 9, name: "Essential Oils", description: "Pure and organic essential oils for aromatherapy.", image: "assets/images/oils.png" },
-    { id: 10, name: "Tea Leaves", description: "Premium tea leaves from the finest gardens.", image: "assets/images/tea.png" },
+    { id: 10, name: "Tea Leaves", description: "Premium tea leaves from the finest gardens.", image: "assets/images/tea.png" }, 
     { id: 11, name: "Coffee Beans", description: "Rich and aromatic roasted coffee beans.", image: "assets/images/coffee.png" },
-    { id: 19, name: "Coconut Products", description: "Desiccated coconut, oil, and other coconut-based products.", image: "assets/images/coconut.png" },
     { id: 20, name: "Rubber Products", description: "High-quality rubber sheets and mats.", image: "assets/images/rubber.png" },
     { id: 21, name: "Cashew Nuts", description: "Premium quality roasted and raw cashew nuts.", image: "assets/images/cashew.png" },
     { id: 22, name: "Honey", description: "Pure organic honey sourced from forests.", image: "assets/images/honey.png" },
     { id: 23, name: "Coir Products", description: "Sustainable coir mats and ropes.", image: "assets/images/coir.png" },
-    { id: 24, name: "Bamboo Products", description: "Eco-friendly bamboo furniture and accessories.", image: "assets/images/bamboo.png" },
-    // Textiles
-    { id: 3, name: "Cotton Textiles", description: "High-thread-count cotton fabrics suitable for luxury garments.", image: "assets/images/textiles.png" },
-    { id: 12, name: "Jute Bags", description: "Eco-friendly and durable jute bags.", image: "assets/images/jute.png" },
-    { id: 13, name: "Silk Fabrics", description: "Luxurious silk fabrics in vibrant colors.", image: "assets/images/silk.png" },
-    // Fruits & Vegetables
-    { id: 5, name: "Vegetables & Fruits", description: "Farm-fresh organic vegetables and seasonal fruits.", image: "assets/images/vegetables.png" },
-    // Frozen Seafood
-    { id: 6, name: "Frozen Seafood", description: "Premium quality frozen seafood processed for freshness.", image: "assets/images/fresh_seafood.png" },
-    // Scrap
-    { id: 25, name: "Metal Scrap", description: "High-grade recycled metal scrap for industrial use.", image: "assets/images/scrap.png" }
 ];
 
 // API Endpoints

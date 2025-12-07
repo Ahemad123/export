@@ -161,6 +161,9 @@
                         }
 
                         products.forEach(product => {
+                            const whatsappMsg = encodeURIComponent(
+          `Hello, I am interested in your product: ${product.name}`
+        );
                             const card = document.createElement('div');
                             card.className = 'product-card';
                             card.innerHTML = `
@@ -169,7 +172,7 @@
                                 <div class="product-info">
                                     <h3>${product.name}</h3>
                                     <p>${product.description}</p>
-                                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Request Quote</a>
+                                    <a href="https://wa.me/918320640910?text=${whatsappMsg}" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Request Quote</a>
                                 </div>
                             `;
                             container.appendChild(card);

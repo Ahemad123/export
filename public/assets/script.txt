@@ -1,0 +1,47 @@
+<script>
+        const form = document.getElementById('contact-form');
+        const btn = form.querySelector('button[type="submit"]');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    status.style.display = 'block';
+                    status.style.color = 'var(--color-accent)';
+                    status.textContent = result.message;
+                    alert(result.message);
+                    form.reset();
+                } else {
+                    throw new Error(result.error || 'Something went wrong');
+                }
+            } catch (error) {
+                status.style.display = 'block';
+                status.style.color = 'red';
+                status.textContent = 'Error: ' + error.message;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+            }
+        });
+    </script>

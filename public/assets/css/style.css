@@ -1,7 +1,4 @@
-/* 
- * Serani Export - Global Styles
- * Theme: Trust, Global Reach, Quality
- */
+
 
 :root {
     /* Color Palette */
@@ -977,6 +974,17 @@ footer {
     margin: 0;
 }
 
+.rfq-box {
+    background: #0a2342;
+    padding: 60px 25px;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid #c5a059; /* GOLD BORDER */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 1s ease forwards;
+}
 
 /* ANIMATIONS */
 @keyframes fadeUp {

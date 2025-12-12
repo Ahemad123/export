@@ -1211,4 +1211,27 @@ footer {
   }
 }
 
-  
+  .rfq-divider {
+  max-width: 900px;
+  margin: 2.5rem auto 3rem;
+  position: relative;
+}
+
+.rfq-divider::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+.rfq-divider::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #d4af37;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  transform: translateX(-50%);
+}
